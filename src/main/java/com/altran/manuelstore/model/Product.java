@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.awt.*;
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class Product {
     private Integer id;
 
     @Column
+    @NotNull(message = "{product.name.notnull}")
     private String name;
 
     @Column
